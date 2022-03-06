@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Magang 2022</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="capt_masuk">Aku senang melihatmu kembali, kamu bisa melanjutkan login untuk mengatur kecukupan gizimu</string>
+    <string name="username_e_mail_nomor_hp">Username/E-mail/Nomor HP</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="masuk">Masuk</string>
+    <string name="belum_memiliki_akun">Belum memiliki akun?</string>
+    <string name="buat_akun_baru">Buat Akun Baru</string>
+    <string name="capt_buat_akun">Buat akun sehingga kamu bisa mengatur kecukupan gizimu</string>
+    <string name="nama_pengguna">Nama Pengguna</string>
+    <string name="email_nomor_hp">Email/Nomor HP</string>
+    <string name="buat_akun">Buat Akun</string>
+    <string name="capt_onboarding1">Monitor kebutuhan gizi harianmu untuk membuat tubuh sehat selalu</string>
+    <string name="judul_onboarding1">Penuhi Kebutuhan Gizi</string>
+</resources>

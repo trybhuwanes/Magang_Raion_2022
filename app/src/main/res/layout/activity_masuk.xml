@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context=".MasukActivity">
+
+    <TextView
+        android:id="@+id/tv_judulMasuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/selamat_datang"
+        android:textSize="36sp"
+        android:textColor="#0EB29A"/>
+
+    <TextView
+        android:id="@+id/tv_captMasuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/capt_masuk"
+        android:textSize="14sp" />
+
+    <!-- Input Email   -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/username_e_mail_nomor_hp"
+            android:inputType="textEmailAddress"
+            android:textColor="#333333" />
+        <!-- input type email/handphone? -->
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input Password   -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_katasandi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#333333"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:passwordToggleEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/katasandi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:hint="@string/kata_sandi"
+            android:inputType="textPassword"
+            android:fontFamily="@font/poppins_regular"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_masuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:backgroundTint="#0EB29A"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/masuk"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        tools:targetApi="lollipop"/>
+
+    <TextView
+        android:id="@+id/tv_belum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_gravity="center"
+        android:text="@string/belum_memiliki_akun"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_buatAkun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/buat_akun"
+        android:textSize="14sp" />
+</LinearLayout>
