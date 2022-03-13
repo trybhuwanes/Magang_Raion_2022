@@ -13,4 +13,14 @@
     <string name="buat_akun">Buat Akun</string>
     <string name="capt_onboarding1">Monitor kebutuhan gizi harianmu untuk membuat tubuh sehat selalu</string>
     <string name="judul_onboarding1">Penuhi Kebutuhan Gizi</string>
+    <string name="email">Email</string>
+    <string name="judul_biodata">Isi Data Dirimu</string>
+    <string name="capt_biodata">Sebelum mulai, yuk Lengkapi data dirimu terlebih dahulu</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="usia">Usia</string>
+    <string name="tinggi_badan">Tinggi Badan (cm)</string>
+    <string name="laki_laki">Laki-Laki</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="selesai">Selesai</string>
+    <string name="judul_profil">Profil Anda</string>
 </resources>

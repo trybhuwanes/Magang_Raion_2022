@@ -40,10 +40,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_regular"
-            android:hint="@string/username_e_mail_nomor_hp"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:textColor="#333333" />
-        <!-- input type email/handphone? -->
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Input Password   -->

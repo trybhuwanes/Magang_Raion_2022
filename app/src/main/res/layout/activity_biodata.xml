@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context=".BiodataActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/judul_biodata"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="36sp"
+        android:textColor="#0EB29A" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/capt_biodata"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="14sp" />
+
+    <!-- Tambahkan input type -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nama_lengkap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama_lengkap"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#333333"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/usia"
+            android:inputType="number"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#333333"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        android:layout_marginTop="15dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tinggi_badan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tinggi_badan"
+            android:inputType="number"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="#333333"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_jenisKelamin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+        <RadioButton
+            android:id="@+id/rb_laki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/laki_laki"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_perempuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/perempuan"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="14sp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_selesai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="@string/selesai"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="18sp"/>
+
+
+
+</LinearLayout>

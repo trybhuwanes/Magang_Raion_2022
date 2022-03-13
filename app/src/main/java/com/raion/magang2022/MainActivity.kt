@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Menunggu 3 detik sebelum berpindah ke activity selanjutnya
         Handler().postDelayed({
             val intent = Intent(this, OnBoarding1Activity::class.java)
             startActivity(intent)

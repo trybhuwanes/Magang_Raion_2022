@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Magang2022">
         <activity
+            android:name=".ProfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BiodataActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

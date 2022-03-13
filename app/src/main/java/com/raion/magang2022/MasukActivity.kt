@@ -24,6 +24,7 @@ class MasukActivity : AppCompatActivity() {
         inputKatasandi = findViewById(R.id.katasandi)
         btnMasuk = findViewById(R.id.btn_masuk)
 
+        //Fungsi ketika btnMasuk di klik
         btnMasuk.setOnClickListener {
             //Mengubahnya menjadi text agar dapat dilihat dan dibaca
             val email = inputEmail.text.toString().trim()
@@ -41,7 +42,7 @@ class MasukActivity : AppCompatActivity() {
             } else {
                 //jika email dan kata sandi sudah benar
                 Toast.makeText(this, "Berhasil masuk", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, HomeActivity::class.java))
+                startActivity(Intent(this, BiodataActivity::class.java))
             }
         }
     }
