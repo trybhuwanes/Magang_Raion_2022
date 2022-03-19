@@ -46,6 +46,8 @@ class BiodataActivity : AppCompatActivity() {
                 intent.putExtra("Nama", namaLengkap)
                 intent.putExtra("Usia", usia)
                 intent.putExtra("Tinggi", tinggiBadan)
+                val intent2 = Intent(this, Timeline2Activity::class.java)
+                intent2.putExtra("Nama", namaLengkap)
                 Toast.makeText(this, "Biodata disimpan", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
             }

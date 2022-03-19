@@ -10,6 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Magang2022">
         <activity
+            android:name=".BottomNavActivity"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_nav" />
+        <activity
+            android:name=".Timeline2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".TimelineActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProfilActivity"
             android:exported="false" />
         <activity

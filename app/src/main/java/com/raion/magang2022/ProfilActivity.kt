@@ -1,11 +1,18 @@
 package com.raion.magang2022
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.TextView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ProfilActivity : AppCompatActivity() {
+
+    private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var btnStatus : ImageButton
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +28,56 @@ class ProfilActivity : AppCompatActivity() {
         val tampilNama = findViewById<TextView>(R.id.tv_nama)
         val tampilUsia = findViewById<TextView>(R.id.tv_usia)
         val tampilTinggi = findViewById<TextView>(R.id.tv_tinggiBadan)
+        btnStatus = findViewById(R.id.btn_timeline)
+        bottomNavigationView = findViewById(R.id.bottom_navigation)
 
         //Menampilkan data
         tampilNama.text = namaLengkap
         tampilUsia.text = "Usia\n$usia"
         tampilTinggi.text = "Tinggi\nBadan\n$tinggiBadan"
+
+        val callback = BottomNavigationView.OnNavigationItemSelectedListener
+
+        BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            when(item.itemId) {
+                R.id.page_home -> {
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    true
+                }
+                R.id.page_timeline -> {
+                    startActivity(Intent(this, TimelineActivity::class.java))
+
+                    true
+                }
+                R.id.page_profil -> {
+                    startActivity(Intent(this, ProfilActivity::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(callback)
+
+//        bottomNavigation.setOnItemReselectedListener {
+//            when(MenuItem.itemId) {
+//                R.id.page_home -> {
+//                    startActivity(Intent(this, HomeActivity::class.java))
+//                }
+//                R.id.page_timeline -> {
+//                    startActivity(Intent(this, TimelineActivity::class.java))
+//                }
+//                R.id.page_profil -> {
+//                    startActivity(Intent(this, ProfilActivity::class.java))
+//                }
+//            }
+//        }
+
+
+        btnStatus.setOnClickListener {
+            startActivity(Intent(this, TimelineActivity::class.java))
+        }
+
     }
+
 }

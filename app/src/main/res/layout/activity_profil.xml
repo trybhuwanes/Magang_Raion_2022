@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfilActivity">
 
     <TextView
@@ -18,6 +19,7 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iv_profpic"
+
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_below="@id/tv_judulProfil"
@@ -39,6 +41,7 @@
         android:textSize="24sp" />
 
     <LinearLayout
+        android:id="@+id/linear_profil"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:orientation="horizontal"
@@ -73,5 +76,23 @@
             android:textColor="@color/black"/>
 
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_timeline"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/linear_profil"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_timeline" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="690dp"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </RelativeLayout>
