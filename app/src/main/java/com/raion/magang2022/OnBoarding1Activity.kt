@@ -10,7 +10,7 @@ class OnBoarding1Activity : AppCompatActivity() {
         setContentView(R.layout.activity_on_boarding1)
     }
 
-    fun pindahMasuk(view: android.view.View) {
-        startActivity(Intent(this, MasukActivity::class.java))
+    fun pindahOnBoarding2(view: android.view.View) {
+        startActivity(Intent(this, OnBoarding2Activity::class.java))
     }
 }

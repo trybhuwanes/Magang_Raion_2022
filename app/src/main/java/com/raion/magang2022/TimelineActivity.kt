@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.textfield.TextInputEditText
 
 class TimelineActivity : AppCompatActivity() {
     //Mendeklarasikan
     private lateinit var inputStatus : TextInputEditText
     private lateinit var btnKirim : ImageButton
+    private lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +21,7 @@ class TimelineActivity : AppCompatActivity() {
         //Mendefinisikan objek
         inputStatus = findViewById(R.id.inputStatus)
         btnKirim = findViewById(R.id.btn_kirim)
+        bottomNavigationView = findViewById(R.id.bottom_navigation)
 
         //Fungsi ketika tombol selesai diklik
         btnKirim.setOnClickListener {
@@ -34,5 +37,27 @@ class TimelineActivity : AppCompatActivity() {
                 startActivity(intent2)
             }
         }
+
+        //Fungsi untuk berpindah activity saat bottom navigation diklik
+        val callback =
+            BottomNavigationView.OnNavigationItemSelectedListener { item ->
+                when(item.itemId) {
+                    R.id.page_home -> {
+                        startActivity(Intent(this, HomeActivity::class.java))
+                        true
+                    }
+                    R.id.page_timeline -> {
+                        startActivity(Intent(this, TimelineActivity::class.java))
+                        true
+                    }
+                    R.id.page_profil -> {
+                        startActivity(Intent(this, ProfilActivity::class.java))
+                        true
+                    }
+                    else -> false
+                }
+            }
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(callback)
     }
 }

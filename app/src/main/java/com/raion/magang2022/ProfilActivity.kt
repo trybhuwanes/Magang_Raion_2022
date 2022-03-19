@@ -11,7 +11,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class ProfilActivity : AppCompatActivity() {
 
     private lateinit var bottomNavigationView: BottomNavigationView
-    private lateinit var btnStatus : ImageButton
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +27,6 @@ class ProfilActivity : AppCompatActivity() {
         val tampilNama = findViewById<TextView>(R.id.tv_nama)
         val tampilUsia = findViewById<TextView>(R.id.tv_usia)
         val tampilTinggi = findViewById<TextView>(R.id.tv_tinggiBadan)
-        btnStatus = findViewById(R.id.btn_timeline)
         bottomNavigationView = findViewById(R.id.bottom_navigation)
 
         //Menampilkan data
@@ -36,8 +34,8 @@ class ProfilActivity : AppCompatActivity() {
         tampilUsia.text = "Usia\n$usia"
         tampilTinggi.text = "Tinggi\nBadan\n$tinggiBadan"
 
-        val callback = BottomNavigationView.OnNavigationItemSelectedListener
-
+        //Fungsi untuk berpindah activity saat bottom navigation diklik
+        val callback =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when(item.itemId) {
                 R.id.page_home -> {
@@ -46,7 +44,6 @@ class ProfilActivity : AppCompatActivity() {
                 }
                 R.id.page_timeline -> {
                     startActivity(Intent(this, TimelineActivity::class.java))
-
                     true
                 }
                 R.id.page_profil -> {
@@ -58,26 +55,6 @@ class ProfilActivity : AppCompatActivity() {
         }
 
         bottomNavigationView.setOnNavigationItemSelectedListener(callback)
-
-//        bottomNavigation.setOnItemReselectedListener {
-//            when(MenuItem.itemId) {
-//                R.id.page_home -> {
-//                    startActivity(Intent(this, HomeActivity::class.java))
-//                }
-//                R.id.page_timeline -> {
-//                    startActivity(Intent(this, TimelineActivity::class.java))
-//                }
-//                R.id.page_profil -> {
-//                    startActivity(Intent(this, ProfilActivity::class.java))
-//                }
-//            }
-//        }
-
-
-        btnStatus.setOnClickListener {
-            startActivity(Intent(this, TimelineActivity::class.java))
-        }
-
     }
 
 }

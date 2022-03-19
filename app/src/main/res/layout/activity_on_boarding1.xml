@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +11,10 @@
         android:id="@+id/iv_onboarding1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:src="@drawable/onboarding1" />
 
     <TextView
@@ -20,31 +22,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="420dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/judul_onboarding1"
         android:textColor="#0EB29A"
-        android:textSize="24sp"
-        android:layout_marginTop="420dp"/>
+        android:textSize="24sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_below="@id/tv_capt_onboarding1"
-        android:text="@string/capt_onboarding1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:fontFamily="@font/poppins_regular"
-        android:textSize="14sp"/>
+        android:text="@string/capt_onboarding1"
+        android:textSize="14sp" />
 
     <Button
         android:layout_width="95dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="290dp"
         android:layout_marginTop="650dp"
-        android:text="Mulai >"
+        android:text="@string/next"
         android:textAllCaps="false"
         android:textSize="14sp"
         android:fontFamily="@font/poppins_semibold"
-        android:onClick="pindahMasuk"/>
+        android:onClick="pindahOnBoarding2"
+        tools:ignore="UsingOnClickInXml" />
 
 
 </RelativeLayout>

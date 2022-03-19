@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EEF6F8"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TimelineActivity">
 
@@ -34,7 +35,7 @@
         style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="690dp"
+        android:layout_marginTop="660dp"
         app:menu="@menu/bottom_navigation_menu" />
 
 </RelativeLayout>
